@@ -221,7 +221,8 @@ def _error_or_warn(error, msg):
         The message to be provided with the error or warning
     """
     if error:
-        raise Exception(msg)
+	print("I'm so bad")
+        #raise Exception(msg)
     else:
         warnings.warn(msg)
 

@@ -20,12 +20,13 @@ def atomtype(structure, forcefield, non_atomistic=False):
 
     """
     known_types = [atom.type for atom in structure.atoms]
-
+    
     if non_atomistic:
         for atom in structure.atoms:
             atom.element = atom.name
 
     typed_structure = forcefield.apply(structure)
+    print(typed_structure)
 
     generated_atom_types = list()
     for i, atom in enumerate(typed_structure.atoms):
